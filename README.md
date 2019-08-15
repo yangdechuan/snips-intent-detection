@@ -1,6 +1,7 @@
 # snips-intent-detection
 Please refer to [Snips NLU](https://snips-nlu.readthedocs.io/en/latest/index.html) for more information.
 
+## Usage
 * step 1: Install snips-nlu
 ```bash
 pip install snips-nlu
@@ -26,3 +27,10 @@ python train.py
 * step 6: Use the model.
   
   Refer demo.py
+
+## Suggestion
+1. Maybe more detailed intent should be defined.
+
+    For example, for the sentence "Which city would you like?", the intent should
+    be "request-city" not "request". 
+    
