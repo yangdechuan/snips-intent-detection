@@ -1,4 +1,5 @@
 # snips-intent-detection
+Please refer to [Snips NLU](https://snips-nlu.readthedocs.io/en/latest/index.html) for more information.
 
 * step 1: Install snips-nlu
 ```bash
@@ -24,4 +25,4 @@ python train.py
 ```
 * step 6: Use the model.
   
-  Reference demo.py
+  Refer demo.py
