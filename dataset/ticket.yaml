@@ -1,0 +1,92 @@
+# Request
+---
+type: intent
+name: request
+slots:
+  - name: moviename
+    entity: movie
+  - name: date
+    entity: snips/datetime
+  - name: numberofpeople
+    entity: snips/number
+utterances:
+  - Can I get [numberofpeople] tickets for [moviename] [date]c
+
+# Inform
+---
+type: intent
+name: inform
+slots:
+  - name: city
+    entity: snips/city
+  - name: date
+    entity: snips/datetime
+  - name: theater
+    entity: theater
+  - name: numberofpeople
+    entity: snips/number
+utterances:
+  - I want to watch in [city]
+  - I want to watch at [date]
+  - I want to watch at [theater]
+  - "[date] is available"
+  - "[theater] is available"
+  - I want [numberofpeople] tickets please
+
+# Deny
+---
+type: intent
+name: deny
+utterances:
+  - "No"
+  - "No way"
+
+# Not_sure
+---
+type: intent
+name: not_sure
+utterances:
+  - I am not sure
+
+# Thanks
+---
+type: intent
+name: thanks
+utterances:
+  - Thank you
+
+# Welcome
+---
+type: intent
+name: welcome
+utterances:
+  - welcome
+
+# Greeting
+---
+type: intent
+name: greeting
+utterances:
+  - Hello
+
+# Closing
+---
+type: intent
+name: closing
+utterances:
+  - Goodbye
+
+# some entity
+---
+type: entity
+name: theater
+automatically_extensible: no
+values:
+- regal meridian 16
+---
+type: entity
+name: movie
+automatically_extensible: no
+values:
+- the big short
+- [zootopia, the zootopia]
