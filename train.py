@@ -13,7 +13,13 @@ if __name__ == "__main__":
 
     with io.open("dataset/ticket.json") as f:
         dataset = json.load(f)
+
+    # Train model.
     engine.fit(dataset)
 
-    parsing = engine.parse("Can I get 2 tickets for the big short?")
-    print(json.dumps(parsing, indent=2))
+    # Save model.
+    engine.persist("snips.model")
+
+    # # Test
+    # parsing = engine.parse("Can I get 2 tickets for the big short?")
+    # print(json.dumps(parsing, indent=2))
